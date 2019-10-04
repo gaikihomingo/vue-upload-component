@@ -221,7 +221,7 @@ export default class ChunkUploadHandler {
    */
   start () {
     request({
-      method: 'POST',
+      method: 'PUT',
       headers: Object.assign({}, this.headers, {
         'Content-Type': 'application/json'
       }),
@@ -289,7 +289,7 @@ export default class ChunkUploadHandler {
     chunk.active = true
     this.updateFileProgress()
     chunk.xhr = createRequest({
-      method: 'POST',
+      method: 'PUT',
       headers: this.headers,
       url: this.action
     })
@@ -336,7 +336,7 @@ export default class ChunkUploadHandler {
     this.updateFileProgress()
 
     request({
-      method: 'POST',
+      method: 'PUT',
       headers: Object.assign({}, this.headers, {
         'Content-Type': 'application/json'
       }),
